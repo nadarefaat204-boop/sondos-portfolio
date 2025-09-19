@@ -1,4 +1,4 @@
-// Main JavaScript file for Nada Refaat's Portfolio
+// Main JavaScript file for Nada Refaat's Portfolio - Dark Green Theme
 document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all animations and interactions
@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollToTop();
     initParallaxEffect();
     
-    // Console welcome message
-    console.log('%c👋 Hey there! Welcome to Nada Refaat\'s Portfolio', 'color: #0ea5e9; font-size: 16px; font-weight: bold;');
-    console.log('%cLooking for a talented video editor? You\'ve come to the right place!', 'color: #3b82f6; font-size: 14px;');
+    // Console welcome message with dark green theme
+    console.log('%c👋 Hey there! Welcome to Nada Refaat\'s Portfolio', 'color: #22c55e; font-size: 16px; font-weight: bold;');
+    console.log('%cLooking for a talented video editor? You\'ve come to the right place!', 'color: #16a34a; font-size: 14px;');
 });
 
 // Initialize project cards with hover effects only
@@ -24,11 +24,11 @@ function initProjectCards() {
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach(card => {
-        // Enhanced hover effects
+        // Enhanced hover effects with dark green theme
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-15px) scale(1.02)';
-            this.style.boxShadow = '0 30px 60px rgba(14, 165, 233, 0.3)';
-            this.style.borderColor = '#0ea5e9';
+            this.style.boxShadow = '0 30px 60px rgba(22, 163, 74, 0.3)';
+            this.style.borderColor = '#22c55e';
             
             // Animate project image
             const projectImage = this.querySelector('.project-image');
@@ -39,8 +39,8 @@ function initProjectCards() {
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
-            this.style.boxShadow = '0 15px 40px rgba(14, 165, 233, 0.08)';
-            this.style.borderColor = '#e2e8f0';
+            this.style.boxShadow = '0 15px 40px rgba(22, 163, 74, 0.08)';
+            this.style.borderColor = 'rgba(34, 197, 94, 0.3)';
             
             // Reset project image
             const projectImage = this.querySelector('.project-image');
@@ -124,13 +124,13 @@ function animateTimelineItems(section) {
     });
 }
 
-// Initialize hover effects
+// Initialize hover effects with dark green theme
 function initHoverEffects() {
     // Skill tags hover effects
     document.querySelectorAll('.skill-tag').forEach(tag => {
         tag.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.05)';
-            this.style.boxShadow = '0 5px 15px rgba(14, 165, 233, 0.3)';
+            this.style.boxShadow = '0 5px 15px rgba(22, 163, 74, 0.3)';
         });
         
         tag.addEventListener('mouseleave', function() {
@@ -142,12 +142,12 @@ function initHoverEffects() {
     // Achievement cards hover effects
     document.querySelectorAll('.achievement-card').forEach(card => {
         card.addEventListener('mouseenter', function() {
-            // Add a subtle glow effect
-            this.style.boxShadow = '0 25px 60px rgba(14, 165, 233, 0.4)';
+            // Add a subtle glow effect with dark green
+            this.style.boxShadow = '0 25px 60px rgba(22, 163, 74, 0.4)';
         });
         
         card.addEventListener('mouseleave', function() {
-            this.style.boxShadow = '0 15px 40px rgba(14, 165, 233, 0.08)';
+            this.style.boxShadow = '0 15px 40px rgba(22, 163, 74, 0.08)';
         });
     });
 
@@ -237,18 +237,18 @@ function initTestimonialRotation() {
     }
 }
 
-// Achievement cards special animations
+// Achievement cards special animations with dark green theme
 function initAchievementAnimations() {
     const achievementCards = document.querySelectorAll('.achievement-card');
     
     achievementCards.forEach(card => {
         // Add click effect for achievement cards
         card.addEventListener('click', function() {
-            // Create a ripple effect
+            // Create a ripple effect with dark green
             const ripple = document.createElement('div');
             ripple.style.position = 'absolute';
             ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(14, 165, 233, 0.3)';
+            ripple.style.background = 'rgba(22, 163, 74, 0.3)';
             ripple.style.transform = 'scale(0)';
             ripple.style.animation = 'ripple 0.6s linear';
             ripple.style.pointerEvents = 'none';
@@ -324,7 +324,7 @@ function initParallaxEffect() {
     }
 }
 
-// Scroll-to-top functionality with Blue Theme
+// Scroll-to-top functionality with Dark Green Theme
 function initScrollToTop() {
     // Create scroll to top button
     const scrollButton = document.createElement('button');
@@ -339,7 +339,7 @@ function initScrollToTop() {
         height: 50px !important;
         border: none !important;
         border-radius: 50% !important;
-        background: linear-gradient(135deg, #0ea5e9, #3b82f6) !important;
+        background: linear-gradient(135deg, #22c55e, #16a34a) !important;
         color: white !important;
         font-size: 20px !important;
         font-weight: bold !important;
@@ -347,7 +347,7 @@ function initScrollToTop() {
         opacity: 0 !important;
         transition: all 0.3s ease !important;
         z-index: 10000 !important;
-        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3) !important;
+        box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -373,17 +373,17 @@ function initScrollToTop() {
         });
     });
     
-    // Hover effects with blue theme
+    // Hover effects with dark green theme
     scrollButton.addEventListener('mouseenter', () => {
         scrollButton.style.transform = 'scale(1.1)';
-        scrollButton.style.background = 'linear-gradient(135deg, #38bdf8, #0ea5e9)';
-        scrollButton.style.boxShadow = '0 8px 25px rgba(14, 165, 233, 0.4)';
+        scrollButton.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
+        scrollButton.style.boxShadow = '0 8px 25px rgba(22, 163, 74, 0.4)';
     });
     
     scrollButton.addEventListener('mouseleave', () => {
         scrollButton.style.transform = 'scale(1)';
-        scrollButton.style.background = 'linear-gradient(135deg, #0ea5e9, #3b82f6)';
-        scrollButton.style.boxShadow = '0 5px 15px rgba(14, 165, 233, 0.3)';
+        scrollButton.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+        scrollButton.style.boxShadow = '0 5px 15px rgba(22, 163, 74, 0.3)';
     });
 }
 
@@ -400,7 +400,7 @@ function animateProgressBars() {
     });
 }
 
-// Add CSS keyframes for animations with blue theme
+// Add CSS keyframes for animations with dark green theme
 const style = document.createElement('style');
 style.textContent = `
     @keyframes ripple {
@@ -430,10 +430,10 @@ style.textContent = `
     
     @keyframes glow {
         0%, 100% {
-            box-shadow: 0 0 5px rgba(14, 165, 233, 0.5);
+            box-shadow: 0 0 5px rgba(22, 163, 74, 0.5);
         }
         50% {
-            box-shadow: 0 0 20px rgba(14, 165, 233, 0.8);
+            box-shadow: 0 0 20px rgba(22, 163, 74, 0.8);
         }
     }
     
@@ -446,15 +446,15 @@ style.textContent = `
         overflow: hidden;
     }
     
-    /* Force scroll-to-top button styling */
+    /* Force scroll-to-top button styling with dark green */
     .scroll-to-top {
-        background: linear-gradient(135deg, #0ea5e9, #3b82f6) !important;
-        box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3) !important;
+        background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+        box-shadow: 0 5px 15px rgba(22, 163, 74, 0.3) !important;
     }
     
     .scroll-to-top:hover {
-        background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
-        box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4) !important;
+        background: linear-gradient(135deg, #4ade80, #22c55e) !important;
+        box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4) !important;
     }
 `;
 
