@@ -1,0 +1,1016 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    background: #f0f6fd;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Cover Section */
+.hero {
+    background: linear-gradient(135deg, #f2faff 0%, #e0f2fe 50%, #bae6fd 100%);
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.2) 0%, transparent 45%),
+        radial-gradient(circle at 50% 10%, rgba(186, 230, 253, 0.35) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 90% 70%, rgba(186, 230, 253, 0.4) 0%, transparent 40%),
+        radial-gradient(circle at 10% 30%, rgba(224, 242, 254, 0.45) 0%, transparent 45%);
+    color: #1e293b;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(14, 165, 233, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+    opacity: 0.7;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease;
+    background: linear-gradient(45deg, #0ea5e9, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero .subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+    color: #334155;
+}
+
+.hero .tagline {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease 0.4s both;
+    color: #475569;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Content */
+.main-content {
+    background: rgba(248, 250, 252, 0.8);
+    background-image: 
+        radial-gradient(circle at 70% 10%, rgba(14, 165, 233, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 30% 60%, rgba(186, 230, 253, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.18) 0%, transparent 40%);
+    margin-top: -50px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 -10px 40px rgba(14, 165, 233, 0.1);
+}
+
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    position: relative;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(186, 230, 253, 0.2) 0%, transparent 40%),
+        radial-gradient(circle at 10% 80%, rgba(224, 242, 254, 0.25) 0%, transparent 35%),
+        radial-gradient(circle at 90% 20%, rgba(14, 165, 233, 0.18) 0%, transparent 45%);
+}
+
+.section:nth-child(even) {
+    background-image: 
+        radial-gradient(circle at 75% 25%, rgba(59, 130, 246, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 25% 75%, rgba(14, 165, 233, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 15% 15%, rgba(224, 242, 254, 0.28) 0%, transparent 35%),
+        radial-gradient(circle at 85% 85%, rgba(14, 165, 233, 0.12) 0%, transparent 50%);
+}
+
+.section:nth-child(odd) {
+    background-image: 
+        radial-gradient(circle at 30% 70%, rgba(14, 165, 233, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 40% 20%, rgba(186, 230, 253, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 90% 60%, rgba(224, 242, 254, 0.3) 0%, transparent 35%),
+        radial-gradient(circle at 5% 40%, rgba(14, 165, 233, 0.14) 0%, transparent 50%);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+}
+
+.section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.profile-image {
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 20px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #334155;
+    font-weight: 400;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+/* Education Section */
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.8), rgba(224, 242, 254, 0.7));
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.06) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.08);
+    margin-bottom: 30px;
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: all 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-5px);
+    border-color: #0ea5e9;
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.education-item::before {
+    content: '🎓';
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    background: #0ea5e9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.education-item h3 {
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.education-item .date {
+    color: #0ea5e9;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.education-item .institution {
+    color: #475569;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.education-item p {
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.skill-category {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 30% 30%, rgba(14, 165, 233, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.08);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.skill-category:hover {
+    transform: translateY(-10px);
+    border-color: #0ea5e9;
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.skill-category h3 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* Work Experience Section */
+.experience-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.08);
+    margin-bottom: 40px;
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    border-color: #0ea5e9;
+    box-shadow: 0 20px 40px rgba(14, 165, 233, 0.15);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.experience-item::before {
+    content: '💼';
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    background: #0ea5e9;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.experience-item h3 {
+    color: #1e293b;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.experience-item .date {
+    color: #0ea5e9;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.experience-item .company {
+    color: #3b82f6;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.experience-item p {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.experience-responsibilities {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-responsibilities li {
+    color: #334155;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.experience-responsibilities li::before {
+    content: '▸';
+    color: #0ea5e9;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Services Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(226, 232, 240, 0.5);
+}
+
+.service-card:hover {
+    transform: translateY(-15px);
+    border-color: #0ea5e9;
+    box-shadow: 0 25px 60px rgba(14, 165, 233, 0.2);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-card h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 30% 30%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 70% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 35%);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(14, 165, 233, 0.15);
+    border-color: #0ea5e9;
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-card h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: #bfdbfe;
+    color: #1e40af;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 35% 35%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 65% 65%, rgba(59, 130, 246, 0.1) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(226, 232, 240, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.achievement-card:hover::before {
+    left: 100%;
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    border-color: #0ea5e9;
+    box-shadow: 0 25px 60px rgba(14, 165, 233, 0.2);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.achievement-card h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.achievement-card p {
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.achievement-date {
+    color: #0ea5e9;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 35%);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(14, 165, 233, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(226, 232, 240, 0.5);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 4rem;
+    color: #0ea5e9;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: #0ea5e9;
+    box-shadow: 0 25px 60px rgba(14, 165, 233, 0.2);
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.95), rgba(224, 242, 254, 0.9));
+}
+
+.testimonial-text {
+    color: #334155;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.author-info h4 {
+    color: #1e293b;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.author-info p {
+    color: #0ea5e9;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    color: #334155;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.contact-item {
+    background: linear-gradient(135deg, rgba(240, 249, 255, 0.85), rgba(224, 242, 254, 0.8));
+    background-image: 
+        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 60% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 35%);
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.08);
+}
+
+.contact-item:hover {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: white;
+    transform: translateY(-5px);
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(14, 165, 233, 0.3);
+}
+
+.contact-item .icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contact-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.contact-item:hover img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+.contact-item h3 {
+    color: #1e293b;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact-item p {
+    color: #334155;
+    margin: 0;
+}
+
+.contact-item:hover h3,
+.contact-item:hover p {
+    color: white;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+    box-shadow: 0 10px 25px rgba(14, 165, 233, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(14, 165, 233, 0.4);
+}
+
+/* Scroll to top button - Blue Theme */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5e9, #3b82f6) !important;
+    color: white !important;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4) !important;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 240px;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section h2 {
+        font-size: 2rem;
+    }
+    
+    .projects-grid,
+    .services-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-item::before,
+    .education-item::before {
+        left: -15px;
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation classes for JavaScript */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading animation for images */
+.loading-image {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.loading-image.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Additional styles for image icons */
+.service-icon-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.service-card:hover .service-icon-img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.skill-category-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    object-fit: contain;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.skill-category:hover .skill-category-icon {
+    transform: scale(1.1);
+}
+
+.skill-category h3 {
+    color: #1e293b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* Enhanced hazy background effects for each section variation */
+#about {
+    background-image: 
+        radial-gradient(circle at 15% 25%, rgba(14, 165, 233, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 45% 10%, rgba(186, 230, 253, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 70% 90%, rgba(224, 242, 254, 0.3) 0%, transparent 35%);
+}
+
+#education {
+    background-image: 
+        radial-gradient(circle at 25% 80%, rgba(59, 130, 246, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 75% 20%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 50% 60%, rgba(186, 230, 253, 0.22) 0%, transparent 40%),
+        radial-gradient(circle at 10% 40%, rgba(224, 242, 254, 0.28) 0%, transparent 35%);
+}
+
+#skills {
+    background-image: 
+        radial-gradient(circle at 80% 30%, rgba(14, 165, 233, 0.19) 0%, transparent 50%),
+        radial-gradient(circle at 20% 70%, rgba(59, 130, 246, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 60% 50%, rgba(186, 230, 253, 0.24) 0%, transparent 40%),
+        radial-gradient(circle at 35% 15%, rgba(224, 242, 254, 0.32) 0%, transparent 35%);
+}
+
+#experience {
+    background-image: 
+        radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.17) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 15% 60%, rgba(186, 230, 253, 0.26) 0%, transparent 40%),
+        radial-gradient(circle at 65% 85%, rgba(224, 242, 254, 0.29) 0%, transparent 35%);
+}
+
+#services {
+    background-image: 
+        radial-gradient(circle at 55% 35%, rgba(14, 165, 233, 0.20) 0%, transparent 50%),
+        radial-gradient(circle at 25% 85%, rgba(59, 130, 246, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 80% 15%, rgba(186, 230, 253, 0.23) 0%, transparent 40%),
+        radial-gradient(circle at 5% 25%, rgba(224, 242, 254, 0.31) 0%, transparent 35%);
+}
+
+#projects {
+    background-image: 
+        radial-gradient(circle at 35% 75%, rgba(59, 130, 246, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 85% 25%, rgba(14, 165, 233, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 10% 50%, rgba(186, 230, 253, 0.27) 0%, transparent 40%),
+        radial-gradient(circle at 70% 65%, rgba(224, 242, 254, 0.33) 0%, transparent 35%);
+}
+
+#achievements {
+    background-image: 
+        radial-gradient(circle at 65% 15%, rgba(14, 165, 233, 0.21) 0%, transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(59, 130, 246, 0.17) 0%, transparent 45%),
+        radial-gradient(circle at 85% 70%, rgba(186, 230, 253, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 40% 35%, rgba(224, 242, 254, 0.30) 0%, transparent 35%);
+}
+
+#testimonials {
+    background-image: 
+        radial-gradient(circle at 50% 85%, rgba(59, 130, 246, 0.19) 0%, transparent 50%),
+        radial-gradient(circle at 90% 15%, rgba(14, 165, 233, 0.17) 0%, transparent 45%),
+        radial-gradient(circle at 20% 30%, rgba(186, 230, 253, 0.28) 0%, transparent 40%),
+        radial-gradient(circle at 75% 55%, rgba(224, 242, 254, 0.34) 0%, transparent 35%);
+}
+
+#contact {
+    background-image: 
+        radial-gradient(circle at 30% 50%, rgba(14, 165, 233, 0.22) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.18) 0%, transparent 45%),
+        radial-gradient(circle at 5% 20%, rgba(186, 230, 253, 0.29) 0%, transparent 40%),
+        radial-gradient(circle at 60% 10%, rgba(224, 242, 254, 0.35) 0%, transparent 35%);
+}
+
+@media (max-width: 768px) {
+    .service-icon-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .skill-category-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
