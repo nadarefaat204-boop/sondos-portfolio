@@ -1,4 +1,4 @@
-// Main JavaScript file for Nada Refaat's Portfolio - White and Red Theme
+// Main JavaScript file for Sondos Khaled's Portfolio - White and Red Theme
 document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize all animations and interactions
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParallaxEffect();
     
     // Console welcome message with white and red theme
-    console.log('%c👋 Hey there! Welcome to Nada Refaat\'s Portfolio', 'color: #dc2626; font-size: 16px; font-weight: bold;');
+    console.log('%c👋 Hey there! Welcome to Sondos Khaled\'s Portfolio', 'color: #dc2626; font-size: 16px; font-weight: bold;');
     console.log('%cLooking for a talented video editor? You\'ve come to the right place!', 'color: #ef4444; font-size: 14px;');
 });
 
